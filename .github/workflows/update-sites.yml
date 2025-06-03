@@ -2,6 +2,9 @@ name: Update Sites in .upptimerc.yml
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/update-sites.yml"
   schedule:
     - cron: "0 0 * * *" # Run daily at midnight
 
@@ -24,7 +27,7 @@ jobs:
             .orgs | to_entries[]
             | select(.value.environments != null and (.value.environments | index("tt02")))
             | (
-                "  - name: \(.key)\n" +
+                "  - name: \(.key)-tt02-aks\n" +
                 "    url: https://\(.key).apps.tt02.altinn.no/kuberneteswrapper/api/v1/deployments" +
                 (
                   if (.value.logo // "") != ""
