@@ -1,6 +1,6 @@
-# [📈 Live Status](https://503stack.xyz): <!--live status--> **🟩 All systems operational**
+# [📈 Live Status](https://503stack.xyz/uptimetest): <!--live status--> **🟩 All systems operational**
 
-This repository contains the open-source uptime monitor and status page for [503stack](https://503stack.xyz), powered by [Upptime](https://github.com/upptime/upptime).
+This repository contains the open-source uptime monitor and status page for [503stack](https://503stack.xyz/uptimetest), powered by [Upptime](https://github.com/upptime/upptime).
 
 [![Uptime CI](https://github.com/503stack/uptimetest/workflows/Uptime%20CI/badge.svg)](https://github.com/503stack/uptimetest/actions?query=workflow%3A%22Uptime+CI%22)
 [![Response Time CI](https://github.com/503stack/uptimetest/workflows/Response%20Time%20CI/badge.svg)](https://github.com/503stack/uptimetest/actions?query=workflow%3A%22Response+Time+CI%22)
@@ -78,7 +78,7 @@ With [Upptime](https://upptime.js.org), you can get your own unlimited and free 
 
 <!--end: status pages-->
 
-[**Visit our status website →**](https://503stack.xyz)
+[**Visit our status website →**](https://503stack.xyz/uptimetest)
 
 ## 📄 License
 
