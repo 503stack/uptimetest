@@ -184,7 +184,7 @@ status-website:
   introTitle: "**Altinn Test** uptime monitor and status page."
   introMessage: Powered entirely by GitHub
   navbar:
-    - title: Prod
+    - title: Uptime Prod
       href: /uptimeprod
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
