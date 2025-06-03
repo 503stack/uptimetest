@@ -1,0 +1,64 @@
+name: Update Sites in .upptimerc.yml
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *" # Run daily at midnight
+
+jobs:
+  update-sites:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Download altinn-orgs.json
+        run: curl -sSL -o altinn-orgs.json https://altinncdn.no/orgs/altinn-orgs.json
+
+      - name: Update .upptimerc.yml with tt02 orgs
+        run: |
+          # Generate the new sites section
+          echo "sites:" > sites_new.yml
+          jq -r '
+            .orgs | to_entries[]
+            | select(.value.environments != null and (.value.environments | index("tt02")))
+            | (
+                "  - name: \(.key)\n" +
+                "    url: https://\(.key).apps.tt02.altinn.no/kuberneteswrapper/api/v1/deployments" +
+                (
+                  if (.value.logo // "") != ""
+                  then "\n    icon: \(.value.logo)"
+                  else ""
+                  end
+                )
+              )
+          ' altinn-orgs.json >> sites_new.yml
+
+          # Replace the sites section in .upptimerc.yml
+          awk -v sites_new="$(cat sites_new.yml)" '
+          /^sites:/ {
+            print sites_new;
+            in_sites_section = 1;
+            next;
+          }
+          /^[a-zA-Z]/ {
+            in_sites_section = 0;
+          }
+          !in_sites_section {
+            print;
+          }
+          ' .upptimerc.yml > .upptimerc.yml.new
+
+          mv .upptimerc.yml.new .upptimerc.yml
+
+      - name: Show updated .upptimerc.yml
+        run: cat .upptimerc.yml
+
+      - name: Commit and push if there are changes
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          git add .upptimerc.yml
+          git diff --staged --quiet || git commit -m "Update sites list with latest tt02 orgs"
+          git push
