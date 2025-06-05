@@ -1,6 +1,7 @@
 # Change these first
 owner: 503stack # Your GitHub organization or username, where this repository lives
 repo: uptimetest # The name of this repository
+runner: "[self-hosted]"
 
 sites:
   - name: brg-tt02-aks
