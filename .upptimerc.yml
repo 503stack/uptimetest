@@ -170,6 +170,8 @@ sites:
   - name: valg-tt02-aks
     url: https://valg.apps.tt02.altinn.no/kuberneteswrapper/api/v1/deployments
     icon: https://altinncdn.no/orgs/valg/valg.png
+  - name: hb-tt02-aks
+    url: https://hb.apps.tt02.altinn.no/kuberneteswrapper/api/v1/deployments
   - name: nve-tt02-aks
     url: https://nve.apps.tt02.altinn.no/kuberneteswrapper/api/v1/deployments
   - name: nokut-tt02-aks
