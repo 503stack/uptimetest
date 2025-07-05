@@ -18,6 +18,7 @@ sites:
     icon: https://altinncdn.no/orgs/dibk/dibk.png
   - name: digdir-tt02-aks
     url: https://digdir.apps.tt02.altinn.no/kuberneteswrapper/api/v1/deployments
+    icon: https://altinncdn.no/orgs/digdir/digdir.png
   - name: dihe-tt02-aks
     url: https://dihe.apps.tt02.altinn.no/kuberneteswrapper/api/v1/deployments
   - name: dmf-tt02-aks
@@ -161,6 +162,7 @@ sites:
     icon: https://altinncdn.no/orgs/tra/tra.png
   - name: ttd-tt02-aks
     url: https://ttd.apps.tt02.altinn.no/kuberneteswrapper/api/v1/deployments
+    icon: https://altinncdn.no/orgs/ttd/ttd.png
   - name: udi-tt02-aks
     url: https://udi.apps.tt02.altinn.no/kuberneteswrapper/api/v1/deployments
     icon: https://altinncdn.no/orgs/udi/udi.png
