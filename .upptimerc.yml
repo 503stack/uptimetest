@@ -51,9 +51,6 @@ sites:
   - name: hi-tt02-aks
     url: https://hi.apps.tt02.altinn.no/kuberneteswrapper/api/v1/deployments
     icon: https://altinncdn.no/orgs/hi/havforskningsinstituttet.png
-  - name: hmrhf-tt02-aks
-    url: https://hmrhf.apps.tt02.altinn.no/kuberneteswrapper/api/v1/deployments
-    icon: https://altinncdn.no/orgs/hmrhf/hmrhf.png
   - name: ikta-tt02-aks
     url: https://ikta.apps.tt02.altinn.no/kuberneteswrapper/api/v1/deployments
     icon: https://altinncdn.no/orgs/ikta/ikta.png
