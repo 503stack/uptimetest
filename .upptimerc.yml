@@ -102,6 +102,9 @@ sites:
   - name: nav-tt02-aks
     url: https://nav.apps.tt02.altinn.no/kuberneteswrapper/api/v1/deployments
     icon: https://altinncdn.no/orgs/nav/nav.png
+  - name: npd-tt02-aks
+    url: https://npd.apps.tt02.altinn.no/kuberneteswrapper/api/v1/deployments
+    icon: https://altinncdn.no/orgs/npd/npd.svg
   - name: npe-tt02-aks
     url: https://npe.apps.tt02.altinn.no/kuberneteswrapper/api/v1/deployments
     icon: https://altinncdn.no/orgs/npe/npe.png
