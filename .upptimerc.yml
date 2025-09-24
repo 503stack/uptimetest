@@ -159,7 +159,7 @@ sites:
     icon: https://altinncdn.no/orgs/tad/tad.png
   - name: tra-tt02-aks
     url: https://tra.apps.tt02.altinn.no/kuberneteswrapper/api/v1/deployments
-    icon: https://altinncdn.no/orgs/tra/tra.png
+    icon: https://altinncdn.no/orgs/tra/tra.svg
   - name: ttd-tt02-aks
     url: https://ttd.apps.tt02.altinn.no/kuberneteswrapper/api/v1/deployments
     icon: https://altinncdn.no/orgs/ttd/ttd.png
