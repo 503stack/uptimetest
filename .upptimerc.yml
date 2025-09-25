@@ -83,7 +83,7 @@ sites:
     icon: https://altinncdn.no/orgs/mdir/mdir.png
   - name: nb-tt02-aks
     url: https://nb.apps.tt02.altinn.no/kuberneteswrapper/api/v1/deployments
-    icon: https://altinncdn.no/orgs/nb/norgesbank.png
+    icon: https://altinncdn.no/orgs/nb/norgesbank.svg
   - name: nbib-tt02-aks
     url: https://nbib.apps.tt02.altinn.no/kuberneteswrapper/api/v1/deployments
     icon: https://altinncdn.no/orgs/nbib/nasjonalbiblioteket.png
@@ -125,7 +125,7 @@ sites:
     icon: https://altinncdn.no/orgs/pat/pat.png
   - name: ssikt-tt02-aks
     url: https://ssikt.apps.tt02.altinn.no/kuberneteswrapper/api/v1/deployments
-    icon: https://altinncdn.no/orgs/ssikt/ssikt.png
+    icon: https://altinncdn.no/orgs/ssikt/ssikt-logo.svg
   - name: sfd-tt02-aks
     url: https://sfd.apps.tt02.altinn.no/kuberneteswrapper/api/v1/deployments
     icon: https://altinncdn.no/orgs/sfd/sfd.png
