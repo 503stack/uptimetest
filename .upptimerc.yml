@@ -184,6 +184,7 @@ sites:
     icon: https://altinncdn.no/orgs/nokut/nokut.svg
   - name: vigo-tt02-aks
     url: https://vigo.apps.tt02.altinn.no/kuberneteswrapper/api/v1/deployments
+    icon: https://altinncdn.no/orgs/vigo/novari_logo.svg
 status-website:
   # Add your custom domain name, or remove the `cname` line if you don't have a domain
   # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
