@@ -38,22 +38,28 @@ jobs:
               )
           ' altinn-orgs.json >> sites_new.yml
 
-          # Replace the sites section in .upptimerc.yml
-          awk -v sites_new="$(cat sites_new.yml)" '
-          /^sites:/ {
-            print sites_new;
-            in_sites_section = 1;
-            next;
-          }
-          /^[a-zA-Z]/ {
-            in_sites_section = 0;
-          }
-          !in_sites_section {
-            print;
-          }
-          ' .upptimerc.yml > .upptimerc.yml.new
+          # Create a backup of the original file
+          cp .upptimerc.yml .upptimerc.yml.backup
 
+          # Extract everything before the sites section
+          awk '/^sites:/ {exit} {print}' .upptimerc.yml > .upptimerc.yml.new
+
+          # Add the new sites section
+          cat sites_new.yml >> .upptimerc.yml.new
+
+          # Extract everything after the sites section (starting from the next top-level key)
+          awk '
+          BEGIN { in_sites = 0; sites_ended = 0 }
+          /^sites:/ { in_sites = 1; next }
+          /^[a-zA-Z]/ && in_sites { sites_ended = 1; in_sites = 0 }
+          sites_ended { print }
+          ' .upptimerc.yml >> .upptimerc.yml.new
+
+          # Replace the original file
           mv .upptimerc.yml.new .upptimerc.yml
+
+          # Clean up temporary files
+          rm -f sites_new.yml .upptimerc.yml.backup
 
       - name: Show updated .upptimerc.yml
         run: cat .upptimerc.yml
